@@ -17,6 +17,23 @@ def home(request):
         
         
         })
+
+def index(request):
+    response = requests.get("https://corona.lmao.ninja/v2/countries/kenya")
+    data = response.json() 
+    return render(request, 'index.html', {
+        'cases': data['cases'],
+        'deaths':data["deaths"], 
+        'recovered':data["recovered"], 
+        'active':data["active"], 
+        'todaycases':data["todayCases"], 
+        'todaydeaths':data["todayDeaths"],
+        'todayrecovered':data["todayRecovered"], 
+        'critical' :data["critical"], 
+        'tests':data["tests"]
+        
+        
+        })
     
 
 
