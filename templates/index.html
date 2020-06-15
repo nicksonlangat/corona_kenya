@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	 <!-- Required meta tags -->
+   <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://kit.fontawesome.com/fca625cbfc.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<title></title>
+  <title></title>
 </head>
 <body class="bg-light">
     
@@ -17,11 +17,11 @@
       <main class="container-fluid py-3">
         <nav class="row text-secondary mb-3">
           <div class="col-md-8">
-            <img src="{% static 'virus.svg'%}" height="48" class="align-middle mr-2 ">
+            <img src="{% static 'virus.png'%}" height="48" class="align-middle mr-2 ">
             <h1 class="d-inline-block align-middle" style="letter-spacing: -0.05rem;">COVID-19 Kenya Dashboard</h1>
           </div>
           <div class="col-md-4 text-md-right">
-            <span>Last Updated: <strong>[[ today ]]</strong></span>
+            <span>Made with<i class="fa fa-heart alert text-danger" aria-hidden="true"></i>by <strong>Nicky</strong> find me on <a href="https://mobile.twitter.com/NicksonLangat20">twitter.</a></span>
           </div>
         </nav>
 
@@ -34,31 +34,31 @@
             </div>
           </div>
           <div class="col">
-            <div class="card card-body border-0 shadow-sm mb-3">
+            <div class="card card-body border-0 shadow-sm mb-3 alert alert-primary">
               <p class="card-text mb-0">Confirmed</p>
               <h2 class="card-title text-primary mb-0">{{cases|intcomma}}</h2>
             </div>
           </div>
           <div class="col">
-            <div class="card card-body border-0 shadow-sm mb-3">
+            <div class="card card-body border-0 shadow-sm mb-3 alert alert-success">
               <p class="card-text mb-0">Recovered</p>
-              <h2 class="card-title text-danger mb-0">{{recovered|intcomma}}</h2>
+              <h2 class="card-title text-success mb-0">{{recovered|intcomma}}</h2>
             </div>
           </div>
           <div class="col">
-            <div class="card card-body border-0 shadow-sm mb-3">
+            <div class="card card-body border-0 shadow-sm mb-3 alert alert-warning">
               <p class="card-text mb-0">Admitted</p>
               <h2 class="card-title text-warning mb-0">{{active|intcomma}}</h2>
             </div>
           </div>
           <div class="col">
-            <div class="card card-body border-0 shadow-sm mb-3">
+            <div class="card card-body border-0 shadow-sm mb-3 alert alert-danger">
               <p class="card-text mb-0">Critical</p>
-              <h2 class="card-title text-success mb-0">{{critical|intcomma}}</h2>
+              <h2 class="card-title text-secondary mb-0">{{critical|intcomma}}</h2>
             </div>
           </div>
           <div class="col">
-            <div class="card card-body border-0 shadow-sm mb-3">
+            <div class="card card-body border-0 shadow-sm mb-3 alert alert-danger">
               <p class="card-text mb-0">Casualties</p>
               <h2 class="card-title text-danger mb-0">{{deaths|intcomma}}</h2>
             </div>
@@ -70,24 +70,24 @@
         <!-- FIRST ROW -->
         <div class="row">
           
-          </div>
+          
           <div class="col">
-            <div class="card card-body border-0 shadow-sm mb-3">
+            <div class="card card-body border-0 shadow-sm mb-3 alert alert-info">
               <p class="card-text mb-0">Confirmed</p>
               <h2 class="card-title text-primary mb-0">{{todaycases|intcomma}}</h2>
             </div>
           </div>
           <div class="col">
-            <div class="card card-body border-0 shadow-sm mb-3">
+            <div class="card card-body border-0 shadow-sm mb-3 alert alert-success">
               <p class="card-text mb-0">Recoveries</p>
-              <h2 class="card-title text-danger mb-0">{{todayrecovered|intcomma}}</h2>
+              <h2 class="card-title text-success mb-0">{{todayrecovered|intcomma}}</h2>
             </div>
           </div>
           
           
           </div>
           <div class="col">
-            <div class="card card-body border-0 shadow-sm mb-3">
+            <div class="card card-body border-0 shadow-sm mb-3 alert alert-danger">
               <p class="card-text mb-0">Casualties</p>
               <h2 class="card-title text-danger mb-0">{{todaydeaths|intcomma}}</h2>
             </div>
